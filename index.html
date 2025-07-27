@@ -1,75 +1,89 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thông Tin Cá Nhân</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f2f5;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
-        .container {
-            background-color: #ffffff;
-            padding: 20px 40px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            max-width: 400px;
-        }
-        h1 {
-            color: #333;
-            border-bottom: 2px solid #007bff;
-            padding-bottom: 10px;
-            margin-bottom: 20px;
-        }
-        p {
-            font-size: 18px;
-            color: #555;
-            line-height: 1.6;
-        }
-        .profile-pic {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin-bottom: 20px;
-            border: 3px solid #007bff;
-        }
-        a {
-            color: #007bff;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Thông Tin Cá Nhân</title>
+  <!-- Thêm biểu tượng từ CDN của Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f2f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .container {
+      background-color: #ffffff;
+      padding: 20px 40px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      max-width: 400px;
+    }
+    h1 {
+      color: #333;
+      border-bottom: 2px solid #007bff;
+      padding-bottom: 10px;
+      margin-bottom: 20px;
+    }
+    p {
+      font-size: 18px;
+      color: #555;
+      line-height: 1.6;
+    }
+    .profile-pic {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 20px;
+      border: 3px solid #007bff;
+    }
+    .fb-button {
+      display: inline-block;
+      background-color: #1877f2;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      margin-top: 15px;
+      transition: background-color 0.3s;
+    }
+    .fb-button:hover {
+      background-color: #0d6efd;
+    }
+    .fb-button i {
+      margin-right: 8px;
+    }
+  </style>
 </head>
 <body>
+  <div class="container">
+    <h1>Thông Tin Cá Nhân</h1>
+    <img src="Thanh.jpg" alt="Ảnh đại diện của Thanh" class="profile-pic" />
 
-    <div class="container">
-        <h1>Thông Tin Cá Nhân</h1>
-        
-        <img src="Thanh.jpg" alt="Ảnh đại diện của Thanh" class="profile-pic">
-        
-        <p>Tôi tên là: <strong>Thanh</strong></p>
-        <p>Tuổi: <strong>21</strong></p>
-        <p>Học năm: <strong>3 đại học</strong></p>
-        <p>Quốc tịch: <strong>Việt Nam</strong></p>
-        <p>Địa chỉ: <strong>Chùa Láng</strong></p>
-        
-        <p>
-            Facebook: 
-            <a href="https://www.facebook.com/thanh.le.111174" target="_blank">
-                https://www.facebook.com/thanh.le.111174
-            </a>
-        </p>
-    </div>
+    <p>Tôi tên là: <strong>Thanh</strong></p>
+    <p>Tuổi: <strong>21</strong></p>
+    <p>Học năm: <strong>3 đại học</strong></p>
+    <p>Quốc tịch: <strong>Việt Nam</strong></p>
+    <p>Địa chỉ: <strong>Chùa Láng</strong></p>
 
+    <!-- Nút Facebook -->
+    <a
+      class="fb-button"
+      href="https://www.facebook.com/thanh.le.111174"
+      target="_blank"
+    >
+      <i class="fab fa-facebook"></i> Truy cập Facebook
+    </a>
+  </div>
 </body>
 </html>
