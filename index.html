@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Thông Tin Cá Nhân</title>
+  <title>Sở Thích Của Tôi</title>
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -11,40 +11,51 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      background-color: #f0f2f5;
+      background-color: #fefefe;
       display: flex;
       justify-content: center;
       align-items: center;
       height: 100vh;
       margin: 0;
     }
+
     .container {
       background-color: #ffffff;
-      padding: 20px 40px;
+      padding: 30px 50px;
       border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
       text-align: center;
-      max-width: 400px;
+      max-width: 800px;
     }
+
     h1 {
       color: #333;
       border-bottom: 2px solid #007bff;
       padding-bottom: 10px;
       margin-bottom: 20px;
     }
+
     p {
       font-size: 18px;
-      color: #555;
+      color: #444;
       line-height: 1.6;
     }
-    .profile-pic {
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
-      object-fit: cover;
-      margin-bottom: 20px;
-      border: 3px solid #007bff;
+
+    .image-row {
+      display: flex;
+      justify-content: center;
+      gap: 10px; /* Khoảng cách giữa các ảnh ~1cm */
+      margin-top: 20px;
+      flex-wrap: wrap;
     }
+
+    .image-row img {
+      width: 250px;
+      height: auto;
+      border-radius: 10px;
+      border: 2px solid #007bff;
+    }
+
     .btn {
       display: inline-block;
       background-color: #007bff;
@@ -53,40 +64,33 @@
       border-radius: 8px;
       text-decoration: none;
       font-weight: bold;
-      margin-top: 15px;
+      margin-top: 25px;
       transition: background-color 0.3s;
     }
+
     .btn:hover {
       background-color: #0056b3;
     }
+
     .btn i {
-      margin-right: 8px;
+      margin-right: 6px;
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>Thông Tin Cá Nhân</h1>
-    <img src="Thanh.jpg" alt="Ảnh đại diện của Thanh" class="profile-pic" />
+    <h1>Sở Thích Của Tôi</h1>
+    <p>Tôi rất yêu thích việc đá bóng.</p>
 
-    <p>Tôi tên là: <strong>Thanh</strong></p>
-    <p>Tuổi: <strong>21</strong></p>
-    <p>Học năm: <strong>3 đại học</strong></p>
-    <p>Quốc tịch: <strong>Việt Nam</strong></p>
-    <p>Địa chỉ: <strong>Chùa Láng</strong></p>
+    <!-- Hai hình ảnh sở thích -->
+    <div class="image-row">
+      <img src="sothich.jpg" alt="Ảnh đá bóng của tôi">
+      <img src="sab.jpg" alt="Ảnh thứ hai liên quan đến sở thích">
+    </div>
 
-    <p>
-      Facebook: 
-      <a class="btn" href="https://www.facebook.com/thanh.le.111174" target="_blank">
-        <i class="fab fa-facebook"></i> Facebook của tôi
-      </a>
-    </p>
-
-    <p>
-      <a class="btn" href="sothich.html">
-        <i class="fas fa-heart"></i> Xem Sở Thích
-      </a>
-    </p>
+    <a class="btn" href="index.html">
+      <i class="fas fa-arrow-left"></i> Quay lại trang chính
+    </a>
   </div>
 </body>
 </html>
