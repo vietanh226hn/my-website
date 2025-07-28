@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>1 Số Hình Ảnh Của Tôi</title>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f2f5;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+      margin: 0;
+      min-height: 100vh;
+      box-sizing: border-box; /* Đảm bảo padding không làm tăng kích thước tổng thể */
+    }
+
+    h1 {
+      color: #333;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .image-row {
+      display: flex;
+      gap: 2cm; /* Mỗi ảnh cách nhau 2cm */
+      flex-wrap: wrap; /* Cho phép các ảnh xuống dòng nếu không đủ chỗ */
+      justify-content: center; /* Căn giữa các ảnh */
+      max-width: 1200px; /* Giới hạn chiều rộng tối đa của hàng ảnh */
+      width: 100%; /* Đảm bảo hàng ảnh chiếm đủ chiều rộng có thể */
+    }
+
+    /* Tạo khung cho mỗi ảnh */
+    .image-item {
+      width: 300px; /* Chiều rộng cố định cho mỗi khung ảnh */
+      border-radius: 10px;
+      border: 2px solid #007bff;
+      overflow: hidden; /* Đảm bảo ảnh không tràn ra khỏi khung nếu có kích thước khác thường */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Thêm đổ bóng nhẹ */
+      background-color: #fff; /* Nền trắng cho khung ảnh */
+      padding: 5px; /* Khoảng đệm bên trong khung */
+      display: flex; /* Sử dụng flex để căn giữa ảnh bên trong */
+      justify-content: center;
+      align-items: center;
+      flex-shrink: 0; /* Ngăn không cho các mục ảnh bị co lại quá nhỏ */
+    }
+
+    .image-item img {
+      max-width: 100%; /* Ảnh không bao giờ vượt quá chiều rộng của khung */
+      width: 100%; /* Ảnh sẽ lấp đầy chiều rộng của khung */
+      height: auto; /* Đảm bảo giữ tỉ lệ của ảnh */
+      display: block; /* Loại bỏ khoảng trắng dưới ảnh */
+      border-radius: 8px; /* Bo tròn góc ảnh bên trong khung */
+    }
+
+    .btn {
+      display: inline-flex; /* Sử dụng inline-flex để căn chỉnh icon và text dễ hơn */
+      align-items: center; /* Căn giữa icon và text theo chiều dọc */
+      background-color: #007bff;
+      color: white;
+      padding: 12px 25px; /* Tăng padding để nút lớn hơn một chút */
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      margin-top: 40px; /* Tăng khoảng cách từ ảnh đến nút */
+      transition: background-color 0.3s ease, transform 0.2s ease; /* Thêm hiệu ứng transform */
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Thêm đổ bóng cho nút */
+    }
+
+    .btn:hover {
+      background-color: #0056b3;
+      transform: translateY(-2px); /* Hiệu ứng nhấc nhẹ nút lên khi hover */
+    }
+
+    .btn i {
+      margin-right: 8px; /* Tăng khoảng cách giữa icon và text */
+      font-size: 1.1em; /* Tăng kích thước icon một chút */
+    }
+
+    /* Media Queries cho màn hình nhỏ hơn */
+    @media (max-width: 768px) {
+      .image-row {
+        gap: 1cm; /* Giảm khoảng cách giữa ảnh trên màn hình nhỏ */
+      }
+      .image-item {
+        width: calc(50% - 0.5cm); /* Hai ảnh mỗi hàng, trừ đi khoảng cách */
+        max-width: 250px; /* Giới hạn kích thước tối đa trên di động */
+      }
+    }
+
+    @media (max-width: 480px) {
+      .image-row {
+        flex-direction: column; /* Mỗi ảnh một hàng trên màn hình rất nhỏ */
+        align-items: center;
+        gap: 20px;
+      }
+      .image-item {
+        width: 90%; /* Chiếm 90% chiều rộng màn hình */
+        max-width: 300px;
+      }
+    }
+
+  </style>
+</head>
+<body>
+  <h1>1 Số Hình Ảnh Của Tôi</h1>
+
+  <div class="image-row">
+    <div class="image-item">
+      <img src="1.jpg" alt="Hình ảnh 1" />
+    </div>
+    <div class="image-item">
+      <img src="2.jpg" alt="Hình ảnh 2" />
+    </div>
+    <div class="image-item">
+      <img src="3.jpg" alt="Hình ảnh 3" />
+    </div>
+    <div class="image-item">
+      <img src="4.jpg" alt="Hình ảnh 4" />
+    </div>
+  </div>
+
+  <a class="btn" href="index.html">
+    <i class="fas fa-arrow-left"></i> Quay lại trang chính
+  </a>
+</body>
+</html>
